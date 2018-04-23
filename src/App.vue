@@ -10,7 +10,7 @@
   				<div class="col-md-6">
       		<b-btn v-b-modal.modal1>Add</b-btn>
           <b-modal id="modal1" @ok="handleSubmit" size="lg">
-            <b-form inline v-for="(field, index) in fields" class="mt-2">
+            <b-form inline v-for="(field, index) in fields" :key="field.field_name" class="mt-2">
               <label>field name </label>
               <b-input class="mr-3 ml-3" v-model="fields[index].field_name" />
               <label>field value </label>
